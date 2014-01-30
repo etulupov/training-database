@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+
+    <!-- select database type, possible values are "mysql" or "sqlite" -->
+    <Environment name="database-type" value="mysql"
+                 type="java.lang.String" override="false"/>
+
+    <Resource name="jdbc/mysql-database" auth="Container"
+              type="javax.sql.DataSource" username="library" password="password"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/Library"
+              maxActive="10" maxIdle="4"/>
+
+        <Environment name="dao/mysql-factory" value="com.noveo.tulupov.trainings.booklibrary.dao.impl.MysqlDaoFactory"
+                     type="java.lang.String" override="false"/>
+
+        <Resource name="jdbc/sqlite-database" auth="Container"
+                  type="javax.sql.DataSource"
+                  driverClassName="org.sqlite.JDBC"
+                  url="jdbc:sqlite:/tmp/library.sqlite"
+                  maxActive="10" maxIdle="4"/>
+
+        <Environment name="dao/sqlite-factory" value="com.noveo.tulupov.trainings.booklibrary.dao.impl.SqliteDaoFactory"
+                     type="java.lang.String" override="false"/>
+
+    </Context>

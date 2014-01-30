@@ -1,0 +1,137 @@
+
+ul#menu {
+    padding: 0px;
+    margin: 0px;
+}
+
+ul#menu {
+    /*  padding-right: 40px;                 */
+}
+
+ul#menu li {
+
+    display: block;
+
+}
+
+ul#menu li a {
+    padding: 8px;
+    text-decoration: none;
+    white-space: nowrap;
+    display: block;
+    color: #555;
+    background-color: #fff;
+    white-space: nowrap;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    border: 1px solid #fff;
+}
+
+ul#menu li a.selected, ul#menu li a.selected:hover {
+
+    color: #000;
+
+    /* Mozilla Firefox */
+    background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #eee 50%, #FFFFFF 100%);
+
+    /* Opera */
+    background-image: -o-linear-gradient(bottom, #FFFFFF 0%, #eee 50%, #FFFFFF 100%);
+
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #FFFFFF), color-stop(0.5, #eee), color-stop(1, #FFFFFF));
+
+    /* Webkit (Chrome 11+) */
+    background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #eee 50%, #FFFFFF 100%);
+
+    border: 1px solid #999;
+
+}
+
+ul#menu li a:hover {
+    text-decoration: underline;
+    background-color: #eee;
+    color: #000;
+}
+
+/*
+ul#menu li:hover {
+
+background-color: #eee;
+
+}
+
+ul#menu li.selected a:hover {
+
+color: #000;
+
+}
+
+ul#menu a {
+
+display: block;
+
+color: #000;
+text-decoration: none;
+
+white-space: nowrap;
+
+}
+*/
+.title {
+    -moz-border-radius: 8px 0 8px 0;
+    -webkit-border-radius: 8px 0 8px 0;
+    border-radius: 8px 0 8px 0;
+
+    border: 1px solid #777;
+    font-weight: bold;
+
+    padding: 8px;
+    font-size: 110%;
+
+    background: url("/images/background_texture.png") repeat 0 0;
+    color: #555;
+    margin-bottom: 5px;
+
+}
+
+.box {
+
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    padding: 8px;
+    display: block;
+
+    /*Transition*/
+    -webkit-transition: -webkit-box-shadow 0.5s ease-out;;
+    -moz-transition: -moz-box-shadow 0.5s ease-out;
+    -o-transition: box-shadow 0.5s ease-out;
+
+    color: #555;
+
+    text-decoration: none;
+}
+
+.box:hover {
+    /* Mozilla Firefox */
+    background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #DBDBDB 50%, #FFFFFF 100%);
+
+    /* Opera */
+    background-image: -o-linear-gradient(bottom, #FFFFFF 0%, #DBDBDB 50%, #FFFFFF 100%);
+
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #FFFFFF), color-stop(0.5, #DBDBDB), color-stop(1, #FFFFFF));
+
+    /* Webkit (Chrome 11+) */
+    background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #DBDBDB 50%, #FFFFFF 100%);
+
+    border: 1px solid #999;
+
+    color: #000;
+    -moz-box-shadow: 0px 0px 15px #0099ff;
+    -webkit-box-shadow: 0px 0px 15px #0099ff;
+    box-shadow: 0px 0px 15px #0099ff;
+}

@@ -1,0 +1,42 @@
+CREATE TABLE Author (
+	id INTEGER PRIMARY KEY,
+	NAME TEXT NOT NULL
+);
+
+CREATE TABLE Publisher (
+	id INTEGER PRIMARY KEY,
+	NAME TEXT NOT NULL,
+	book_count INTEGER DEFAULT 0 NOT NULL
+);
+
+CREATE TABLE Book (
+	id INTEGER PRIMARY KEY,
+	title TEXT NOT NULL
+);
+
+CREATE TABLE BookAuthor (
+	book_id INTEGER NOT NULL REFERENCES Book(id),
+	author_id INTEGER NOT NULL REFERENCES Author (id),
+  PRIMARY KEY (book_id, author_id)
+);
+
+CREATE TABLE BookInstance (
+	id INTEGER PRIMARY KEY,
+	book_id INTEGER NOT NULL REFERENCES Book (id),
+	publisher_id INTEGER NOT NULL REFERENCES Publisher (id),
+	YEAR INTEGER NOT NULL,
+	isbn TEXT NOT NULL
+);
+
+CREATE TRIGGER PUBLISHER_TRIGGER_INSERT BEFORE INSERT ON BookInstance
+FOR EACH ROW
+BEGIN
+	UPDATE Publisher SET book_count = (SELECT book_count FROM Publisher WHERE id = NEW.publisher_id) + 1 WHERE id = NEW.publisher_id;
+END;
+
+CREATE TRIGGER PUBLISHER_TRIGGER_UPDATE BEFORE DELETE ON BookInstance
+FOR EACH ROW
+BEGIN
+	UPDATE Publisher SET book_count = (SELECT book_count FROM Publisher WHERE id = OLD.publisher_id) - 1 WHERE id = OLD.publisher_id;
+END;
+

@@ -1,0 +1,90 @@
+
+
+tr.even {
+    background-color: #FF0;
+}
+
+tr.odd {
+    background-color: #DEDEDE;
+}
+
+table.t1 {
+    margin: 1em 0;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+.t1 tr {
+  padding: 5px;
+}
+
+
+.t1 tr.even {
+    border: 1px solid #777;
+    background: #fff;
+}
+
+.t1 tr.odd {
+    border: 1px solid #777;
+    background: #eee;
+}
+.t1 tr:hover {
+    border: 1px solid #777;
+    background-image: linear-gradient(bottom, rgb(230,223,230) 5%, rgb(245,245,245) 67%);
+    background-image: -o-linear-gradient(bottom, rgb(230,223,230) 5%, rgb(245,245,245) 67%);
+    background-image: -moz-linear-gradient(bottom, rgb(230,223,230) 5%, rgb(245,245,245) 67%);
+    background-image: -webkit-linear-gradient(bottom, rgb(230,223,230) 5%, rgb(245,245,245) 67%);
+    background-image: -ms-linear-gradient(bottom, rgb(230,223,230) 5%, rgb(245,245,245) 67%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.05, rgb(230,223,230)),
+        color-stop(0.67, rgb(245,245,245))
+    );
+}
+
+.t1 th {
+    padding: 8px;
+    background: url("/images/background_texture.png") repeat 0 0;
+
+    white-space: nowrap;
+
+    font-weight: bold;
+
+
+    font-size : 110%;
+
+    color: #555;
+
+    border: 1px solid #777;
+}
+
+.t1 td {
+    padding: 2px 4px;
+    border: 1px dotted;
+
+}
+
+
+.highlight img{
+
+    -moz-opacity: 0.3;
+    opacity: 0.3;
+}
+
+.highlight:hover img{
+
+    -moz-opacity: 1;
+    opacity: 1;
+}
+
+
+.t1 th.id, td.id {
+    width: 20px;
+}
+.t1 th.delete, td.delete {
+    width: 20px;
+    text-align: center;
+}
